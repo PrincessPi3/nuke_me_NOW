@@ -10,8 +10,8 @@ int main(void) {
     // note: try and figure out the damned proper devices L:"awzasaa"
 #ifdef DEBUG
     system("whoami");
-    system("sudo whoami");
-    system("cryptsetup erase -q");
+    // system("sudo whoami");
+    system("cryptsetup erase -q CRYPT_DISK");
     system("poweroff -ff");
 #else
     system("cryptsetup erase -q CRYPT_DISK 2>>DEVNULL 1>DEVNULL");

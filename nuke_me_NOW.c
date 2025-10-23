@@ -3,13 +3,15 @@
 
 int main(void) {
     int rc = system("whoami");
-    if (rc == -1) {
-        perror("system");
-        return 1;
-    }
+    printf("%d", rc);
+    // if (rc == -1) {
+    //    perror("system");
+    //    return 1;
+    // }
     // If you need the command exit code:
-    if (WIFEXITED(rc)) {
-        printf("exit status: %d\n", WEXITSTATUS(rc));
-    }
+    // if (WIFEXITED(rc)) {
+        // only show return status during debug
+        // printf("exit status: %d\n", WEXITSTATUS(rc));
+    //  }
     return 0;
 }

@@ -20,8 +20,6 @@ lsblk --list | awk '{printf "%s%s\n", "/dev/",$1}' | tail -n +2 | \
             isLuks=$(cryptsetup isLuks $device)
             echo $isLuks
             if [[ $isLuks == 0 ]]; then
-                echo nukin 
-                # nuke the luks headers
                 nice -20 cryptsetup erase -q $device 1>>$output_log 2>>$error_log || cryptsetup erase -q --disable-lock $device 1>>$output_log 2>>$error_log
             fi
         fi

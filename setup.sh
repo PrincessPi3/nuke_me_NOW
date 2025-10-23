@@ -8,7 +8,7 @@ sudo chown root:root wrapper
 sudo chown root:root nuke_me_NOW.sh
 
 # set suid
-sudo chmod 4777 wrapper
+sudo chmod 4755 wrapper
 
 # sudo chmod 4777 nuke_me_NOW.sh
 # sudo chmod 4777 $(which cryptsetup)

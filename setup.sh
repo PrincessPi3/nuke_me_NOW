@@ -1,5 +1,3 @@
-# todo: check for needed packages and install them
-# todo: setup keyboard and terminal shortcuts
 # compile the wrapper
 # gcc wrapper.c -o wrapper
 gcc nuke_me_NOW.c -o nuke_me_NOW

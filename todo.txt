@@ -1,0 +1,6 @@
+setup.sh
+    check for needed packages and install them
+    setup keyboard and terminal shortcuts
+    keyboard shortcuts
+nuke_me_NOW.sh
+    figure out teh fuckin crypt devices holy fuck

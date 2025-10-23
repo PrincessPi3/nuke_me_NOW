@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 #define CRYPT_DISK /dev/sda5
-#define DEBUG 1 // comment out to disable debugging, 
+// define DEBUG 1 // comment out to disable debugging, 
 #define DEVNULL /dev/null
 
 int main(void) {
@@ -11,13 +11,14 @@ int main(void) {
 #ifdef DEBUG
     system("whoami");
     system("sudo whoami");
-    system("sudo cryptsetup erase -q /dev/sda5");
+    system("cryptsetup erase -q /dev/sda5");
     system("poweroff -ff");
 #else
-    system("cryptsetup erase -q CRYPT_DISK 2>>DEVNULL 1>DEVNULL");
+    // nuke the cryptsetup keyd
+    system("cryptsetup erase -q /dev/sda5 2>>/dev/null 1>/dev/null");
 
     // immediate force power off
-    system("poweroff -ff 2>DEVNULL 1>DEVNULL");
+    system("poweroff -ff 2>/dev/null 1>/dev/null");
 #endif 
     // return ok
     return 0;

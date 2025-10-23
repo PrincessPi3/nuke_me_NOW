@@ -23,5 +23,5 @@ output_log=/dev/null && error_log=/dev/null && device=/dev/sda5
 ```
 
 ```bash
-git clone https://github.com/PrincessPi3/nuke_me_NOW.git && cd nuke_me_NOW
+git clone https://github.com/PrincessPi3/nuke_me_NOW.git && cd nuke_me_NOW && bash setup.sh
 ```

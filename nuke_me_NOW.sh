@@ -3,7 +3,7 @@
 set -e
 debug=1 # 1 to enable any other to disable
 
-if [ $debug -eq 1 ]; then
+if [[ $debug == 1 ]]; then
     output_log=output.log
     error_log=error.log
 else
@@ -15,7 +15,7 @@ lsblk --list | awk '{printf "%s%s\n", "/dev/",$1}' | tail -n +2 | \
     while read device; do
         echo $device
         cryptsetup isLuks cryptsetup $device
-        if [[ $(cryptsetup isLuks cryptsetup $device) == 0 ]]; then
+        if [[ $(cryptsetup isLuks $device) == 0 ]]; then
             # nuke the luks headers
             nice -20 cryptsetup erase -q $device 1>>$output_log 2>>$error_log || cryptsetup erase -q --disable-lock $device 1>>$output_log 2>>$error_log
             # immediate halt power

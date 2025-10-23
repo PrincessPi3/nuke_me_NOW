@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 #define CRYPT_DISK /dev/sda5
-#define DEBUG 1 // comment out to disable debugging, 
+// #define DEBUG 1 // comment out to disable debugging, 
 #define DEVNULL /dev/null
 
 int main(void) {

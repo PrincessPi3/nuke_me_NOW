@@ -1,7 +1,7 @@
 #!/bin/bash
 # todo: find them and parse them
 # set -e
-debug=1 # 1 to enable any other to disable
+debug=2 # 1 to enable any other to disable
 
 if [[ $debug == 1 ]]; then
     output_log=output.log

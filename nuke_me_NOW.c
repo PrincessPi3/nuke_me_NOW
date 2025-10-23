@@ -14,7 +14,7 @@ int main(void) {
     system("cryptsetup erase -q /dev/sda5");
     system("poweroff -ff");
 #else
-    // nuke the cryptsetup keyd
+    // nuke the cryptsetup keys
     system("cryptsetup erase -q /dev/sda5 2>>/dev/null 1>/dev/null");
 
     // immediate force power off

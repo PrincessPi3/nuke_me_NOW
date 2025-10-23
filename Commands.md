@@ -15,9 +15,13 @@ git stash && git pull && git reset --hard && sudo bash setup.sh && bash nuke_me_
 ```
 
 ```bash
-output_log=output.log && error_log=error.log && device=/dev/sda5`
+output_log=output.log && error_log=error.log && device=/dev/sda5
 ```
 
 ```bash
 output_log=/dev/null && error_log=/dev/null && device=/dev/sda5
+```
+
+```bash
+git clone https://github.com/PrincessPi3/nuke_me_NOW.git && cd nuke_me_NOW
 ```

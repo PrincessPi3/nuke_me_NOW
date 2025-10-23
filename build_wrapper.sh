@@ -1,0 +1,1 @@
+gcc wrapper.c -o wrapper

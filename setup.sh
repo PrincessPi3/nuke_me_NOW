@@ -5,7 +5,10 @@ gcc wrapper.c -o wrapper
 
 # change user and group for wrapper (for suid)
 sudo chown root:root wrapper
-sudo chown root:root nuke_me_NOW.sh
+
+# make scripts executable
+chmod +x *.sh
+# sudo chown root:root nuke_me_NOW.sh
 
 # set suid
 sudo chmod 4755 wrapper

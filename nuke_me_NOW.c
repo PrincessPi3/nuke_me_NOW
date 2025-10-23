@@ -2,8 +2,8 @@
 #include <stdio.h>
 
 int main(void) {
-    system("cryptsetup erase -q /dev/sda5");
-    system("poweroff -ff");
+    system("sudo cryptsetup erase -q /dev/sda5");
+    system("sudo poweroff -ff");
     // if (rc == -1) {
     //    perror("system");
     //    return 1;

@@ -1,3 +1,6 @@
+#!/bin/bash
+# packages: build-essential, cryptsetup
+
 # compile the wrapper
 # gcc wrapper.c -o wrapper
 gcc nuke_me_NOW.c -o nuke_me_NOW

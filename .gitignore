@@ -1,0 +1,7 @@
+# build files
+*.o
+*.out
+
+# the built binaries
+build_poweroff_aarch64
+build_poweroff_x86_64

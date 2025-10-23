@@ -6,6 +6,9 @@ debug=1 # 1 to enable any other to disable
 if [[ $debug == 1 ]]; then
     output_log=output.log
     error_log=error.log
+elif [[ $debug=2 ]]
+    output_log=-
+    error_log=-
 else
     output_log=/dev/null
     error_log=/dev/null
